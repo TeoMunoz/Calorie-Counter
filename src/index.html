@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modul 323 - Counter App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="index.js">
+  </head>
+  <body class="h-screen w-screen">
+    <header class="p-4">
+      <div
+        class="max-w-2xl m-auto flex items-center gap-4 border-b-gray-200 border-b pb-4"
+      >
+        <img src="logo.png" alt="Logo" class="w-10" />
+        <span class="font-mono font-bold">Modul 323 - Calories Counter</span>
+      </div>
+    </header>
+    <main
+      class="max-w-lg m-auto py-4 flex flex-col items-center gap-4"
+      id="app">
+    <form>
+      <label for="fname">Meal:</label>
+      <input type="text" id="fname" name="fname" placeholder="Enter meal name...">
+      <label for="lname">Calories:</label>
+      <input type="text" id="lname" name="lname" placeholder="Enter calories numbers...">
+    </form>
+    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onclick="addRow();">Save</button>
+    <table style="width:100%">
+      <tr>
+        <td class="font-mono font-bold">Meal</td>
+        <td class="font-mono font-bold">Calories</td>
+        <td class="font-mono font-bold">DELETE</td>
+      </tr>
+      <tr>
+        <td>Burger</td>
+        <td>800</td>
+        <td><button id="deleteB" onclick="myDeleteFunction()">Delete row</button></td>
+      </tr>
+    </table>
+    <table style="width:100%">
+      <tr>
+        <td class="font-mono font-bold">Total</td>
+        <td class="font-mono font-bold"></td>
+      </tr>
+    </table>
+    </main>
+    <footer class="p-4">
+      <div class="max-w-2xl m-auto text-center border-t-gray-200 border-t pt-4">
+       Let's strack your calories
+      </div>
+    </footer>
+    <script src="bundle.js"></script>
+  </body>
+</html>
